@@ -4,6 +4,7 @@ import Navbar from "./component/navbar";
 import Category from "./pages/category";
 import Login from "./pages/Login";
 import Register from "./pages/register.jsx";
+import ProductDetails from "./pages/product-details.jsx";
 function App() {
   const hideNavbarRoutes = ["/login", "/register"];
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/register" element={<Register />} />
 
         <Route path="/category/:categoryName" element={<Category />} />
+        <Route path="/products/:productId" element={<ProductDetails />} />
       </Routes>
     </>
   );

@@ -60,17 +60,17 @@ export default function Navbar() {
           <h2 className="text-2xl font-bold">Captivating-Curves</h2>
         </div>
         <div className="text-black">
-          <ul className="flex gap-3">
+          <ul className="flex gap-4">
             {navLinks.map((link, idx) => {
               if (link.title == "Categories") {
                 return (
                   <li key={idx} className="relative group">
                     <span className="cursor-pointer">Categories</span>
-                    <ul className="absolute hidden group-hover:block bg-neutral-200/45 text-black mt-2 rounded-lg shadow-lg  ">
+                    <ul className="absolute hidden group-hover:block bg-neutral-200 text-black mt-2 rounded-lg shadow-lg overflow-y-auto h-80  ">
                       {newLink.map((link) => (
                         <li>
                           <Link
-                            className=" block  px-4 py-2 hover:bg-amber-50 w-full rounded-lg"
+                            className=" block  px-4 py-2 hover:bg-amber-50 w-50 text-[13px] rounded-lg"
                             to={`category/${link.title}`}
                           >
                             {link.title.toLocaleUpperCase()}
